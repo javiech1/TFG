@@ -5,8 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def linear_regression(x: np.ndarray, y: np.ndarray, degree: int, draw: bool):
-    print(f"x: {x}")
-    print(f"y: {y}")
+    #print(f"x: {x}")
+    #print(f"y: {y}")
 
     if len(x) != len(y):
         print("x and y have to have the same lenght!")
@@ -24,8 +24,8 @@ def linear_regression(x: np.ndarray, y: np.ndarray, degree: int, draw: bool):
     if draw:
         # Display y
         _, ax = plt.subplots()
-        ax.plot(y, "ro", label="y")
-        ax.plot(X.dot(theta), "bs", label="Ax")
+        ax.plot(y, "ro", label="y", linewidth = 0.1)
+        ax.plot(X.dot(theta), "bs", label="Ax", linewidth = 0.1)
         plt.axis([-1, x.size + 1, -0.5, 1.5])
         plt.title(f"y vs X*theta with degree= {str(degree)}")
         plt.ylabel("samples")
